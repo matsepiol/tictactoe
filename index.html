@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Tic Tac Toe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/logic.js" defer></script>
+    <script type="text/javascript" src="js/computerAI.js" defer></script>
+    <script type="text/javascript" src="js/main.js" defer></script>
+  </head>
+
+  <body> 
+    <div class="options">
+      <form>
+        <input id="pvp" type="radio" name="game-type" value="PvP" checked onchange="changeGameType(this.value)">
+        <label for="pvp"><span><span></span></span>Player vs. Player</label>
+        <input id="pvc" type="radio" name="game-type" value="PvC" onchange="changeGameType(this.value)">
+        <label for="pvc"><span><span></span></span>Player vs. Computer</label>
+      </form>
+
+      <form class="difficulty hidden">
+        Difficulty:
+        <input id="easy" type="radio" name="game-difficulty" value="easy" onchange="changeGameDifficulty(this.value)">
+        <label for="easy"><span><span></span></span>Easy</label>
+        <input id="medium" type="radio" name="game-difficulty" value="medium" checked onchange="changeGameDifficulty(this.value)">
+        <label for="medium"><span><span></span></span>Medium</label>
+        <input id="hard" type="radio" name="game-difficulty" value="hard" onchange="changeGameDifficulty(this.value)">
+        <label for="hard"><span><span></span></span>Hard</label>
+      </form>
+
+      <form class="player-mark hidden">
+        Play with:
+        <input id="x-mark" type="radio" name="player-mark" value="x" checked onchange="changePlayerMark(this.value)">
+        <label for="x-mark"><span><span></span></span>X</label>
+        <input id="o-mark" type="radio" name="player-mark" value="o" onchange="changePlayerMark(this.value)">
+        <label for="o-mark"><span><span></span></span>O</label>
+      </form> 
+    </div>
+
+    <div id="grid">
+      <div class="grid-element" id="0-0">
+      </div>
+
+      <div class="grid-element" id="0-1">
+      </div>
+
+      <div class="grid-element" id="0-2">
+      </div>
+
+      <div class="grid-element" id="1-0">
+      </div>
+
+      <div class="grid-element" id="1-1">
+      </div>
+
+      <div class="grid-element" id="1-2">
+      </div>
+
+      <div class="grid-element" id="2-0">
+      </div>
+
+      <div class="grid-element" id="2-1">
+      </div>
+
+      <div class="grid-element" id="2-2">
+      </div>
+    </div>
+
+    <div class="current-turn">
+     <p>Current turn:</p>
+     <span class="current-turn-el x"></span>
+    </div>
+
+  </body>
+
+</html>
