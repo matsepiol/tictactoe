@@ -10,7 +10,7 @@ var autoprefixerOptions = {
 gulp.task('sass', function() {
   return gulp.src('scss/style.scss')
     .pipe(sass())
-//    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(autoprefixer(autoprefixerOptions))
     .pipe(gulp.dest('./'))
     .pipe(browserSync.reload({
       stream: true

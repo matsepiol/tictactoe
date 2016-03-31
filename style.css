@@ -10,22 +10,22 @@
   width: 250px;
   border: 1px solid #d2d2d2;
   background: #fff;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
-  background: -webkit-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
-  background: -moz-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
-  background: -ms-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
-  background: -o-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
-  background: linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -webkit-linear-gradient(top, #d9eaf3 0%, #fff 8%);
+  background: linear-gradient(to bottom, #d9eaf3 0%, #fff 8%);
   background-size: 100% 20px;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
   .grid-element span {
     opacity: 0;
-    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+    -webkit-transition: all 0.7s ease-out;
     transition: all 0.7s ease-out; }
     .grid-element span.element {
       opacity: 1;
-      transform: none;
+      -webkit-transform: none;
+              transform: none;
+      -webkit-transition: all 0.7s ease-out;
       transition: all 0.7s ease-out; }
 
 .current-turn {
@@ -37,12 +37,8 @@
   font-family: Impact, Charcoal, sans-serif;
   border: 1px solid #d2d2d2;
   background: #fff;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
-  background: -webkit-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
-  background: -moz-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
-  background: -ms-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
-  background: -o-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
-  background: linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 4px;
+  background: -webkit-linear-gradient(top, #d9eaf3 0%, #fff 8%);
+  background: linear-gradient(to bottom, #d9eaf3 0%, #fff 8%);
   background-size: 100% 20px;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
@@ -102,19 +98,13 @@ input[type=radio] + label > span {
   border: 0.0625em solid silver;
   border-radius: 0.25em;
   background: #e0e0e0;
-  background-image: -moz-linear-gradient(#f0f0f0, #e0e0e0);
-  background-image: -ms-linear-gradient(#f0f0f0, #e0e0e0);
-  background-image: -o-linear-gradient(#f0f0f0, #e0e0e0);
-  background-image: -webkit-linear-gradient(#f0f0f0, #e0e0e0);
-  background-image: linear-gradient(#f0f0f0, #e0e0e0);
+  background-image: -webkit-linear-gradient(top, #f0f0f0 50%, #e0e0e0 100%);
+  background-image: linear-gradient(to bottom, #f0f0f0 50%, #e0e0e0 100%);
   vertical-align: bottom; }
 
 input[type=radio]:checked + label > span {
-  background-image: -moz-linear-gradient(#e0e0e0, #f0f0f0);
-  background-image: -ms-linear-gradient(#e0e0e0, #f0f0f0);
-  background-image: -o-linear-gradient(#e0e0e0, #f0f0f0);
-  background-image: -webkit-linear-gradient(#e0e0e0, #f0f0f0);
-  background-image: linear-gradient(#e0e0e0, #f0f0f0); }
+  background-image: -webkit-linear-gradient(top, #e0e0e0 50%, #f0f0f0 100%);
+  background-image: linear-gradient(to bottom, #e0e0e0 50%, #f0f0f0 100%); }
 
 input[type=radio]:checked + label > span > span {
   display: block;
@@ -124,8 +114,5 @@ input[type=radio]:checked + label > span > span {
   border: 0.0625em solid #73994d;
   border-radius: 0.125em;
   background: #99cc66;
-  background-image: -moz-linear-gradient(#b3d98c, #99cc66);
-  background-image: -ms-linear-gradient(#b3d98c, #99cc66);
-  background-image: -o-linear-gradient(#b3d98c, #99cc66);
-  background-image: -webkit-linear-gradient(#b3d98c, #99cc66);
-  background-image: linear-gradient(#b3d98c, black); }
+  background-image: -webkit-linear-gradient(top, #b3d98c 50%, black 100%);
+  background-image: linear-gradient(to bottom, #b3d98c 50%, black 100%); }
