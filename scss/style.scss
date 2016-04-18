@@ -1,0 +1,129 @@
+@mixin paper-imitation {
+  border: 1px solid #d2d2d2;
+  background: #fff;
+  background: linear-gradient(to bottom, #d9eaf3 0%, #fff 8%);
+  background-size: 100% 20px;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+}
+
+#grid {
+  height: 780px;
+  margin: auto;
+  width: 780px;
+}
+
+.grid-element {
+  cursor: pointer;
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+
+  @include paper-imitation;
+
+  span {
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transition: all 0.7s ease-out;
+
+    &.element {
+      opacity: 1;
+      transform: none;
+      transition: all 0.7s ease-out;
+    }
+  }
+}
+
+.current-turn {
+  font-family: Impact, Charcoal, sans-serif;
+  height: 405px;
+  position: fixed;
+  right: 115px;
+  top: 10px;
+  width: 350px;
+
+  @include paper-imitation;
+
+  p {
+    color: #000;
+    font-size: 32px;
+    text-align: center;
+  }
+}
+
+.o {
+  border: 30px solid #ec5950;
+  border-radius: 110px;
+  display: block;
+  height: 160px;
+  margin: 16px auto;
+  width: 160px;
+}
+
+.x {
+  display: block;
+  position: relative;
+}
+
+.x::after {
+  bottom: 0;
+  color: #000100;
+  content: "\274c";
+  font-size: 245px;
+  left: 0;
+  line-height: 100px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 80px;
+}
+
+.options {
+  left: 100px;
+  position: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+input[type=radio] {
+  font-size: 1em;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  width: 2em;
+}
+
+input[type=radio] + label {
+  display: inline-block;
+  line-height: 1.5em;
+  margin-left: -2em;
+}
+
+input[type=radio] + label > span {
+  background: rgb(224,224,224);
+  background-image: linear-gradient(to bottom, rgb(240,240,240) 50%, rgb(224,224,224) 100%);
+  border: 0.0625em solid rgb(192,192,192);
+  border-radius: 0.25em;
+  display: inline-block;
+  height: 0.875em;
+  margin: 0.25em 0.5em 0.25em 0.25em;
+  vertical-align: bottom;
+  width: 0.875em;
+}
+
+input[type=radio]:checked + label > span {
+  background-image: linear-gradient(to bottom, rgb(224,224,224) 50%, rgb(240,240,240) 100%);
+}
+
+input[type=radio]:checked + label > span > span {
+  background: rgb(153,204,102);
+  background-image: linear-gradient(to bottom, rgb(179,217,140) 50%, rgb(0,0,0) 100%);
+  border: 0.0625em solid rgb(115,153,77);
+  border-radius: 0.125em;
+  display: block;
+  height: 0.5em;
+  margin: 0.125em;
+  width: 0.5em;
+}
