@@ -1,1 +1,1 @@
-# tictactoe
+# tictactoe game written in javascript
